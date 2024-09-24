@@ -11,14 +11,29 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "top-primary":
+          "0 -10px 20px 2px rgba(133, 15, 141, 0.3), 0 -4px 6px -4px rgba(133, 15, 141, 0.3)",
+        "bottom-primary":
+          "0 10px 20px 3px rgba(133, 15, 141, 0.3), 0 4px 6px -4px rgba(133, 15, 141, 0.3)",
+        "top-light":
+          "0 -10px 20px 2px rgba(255, 255, 255, 0.3), 0 -4px 6px -4px rgba(255, 255, 255, 0.3)",
+        "bottom-light":
+          "0 10px 20px 3px rgba(255, 255, 255, 0.3), 0 4px 6px -4px rgba(255, 255, 255, 0.3)",
+        "right-light":
+          "10px -2px 20px 2px rgba(255, 255, 255, 0.3), 0 -4px 6px -14px rgba(255, 255, 255, 0.3)",
+      },
       colors: {
-        primary: "#074173",
+        primary: "#850F8D",
         secondary: "#76ABAE",
         danger: "#e74c3c",
-        dark: "#272727",
+        dark: "#000000",
         success: "#16423C",
         info: "#4CA9FF",
         light: "#ffffff",
+        darkBackground: "#1A1A1A", // Custom dark mode background
+        darkText: "#E0E0E0", // Custom dark mode text
+        darkPrimary: "#5A056B",
       },
       fontFamily: {
         sans: ["Sora", "sans-serif"], // Corrected to 'sans' and ensured proper naming

@@ -1,16 +1,24 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MainPage from "./pages/MainPage";
 import { NextUIProvider } from "@nextui-org/react";
 import "aos/dist/aos.css";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import "react-pdf/dist/esm/Page/TextLayer.css";
+import SpinnerComponent from "./components/SpinnerComponent";
+
+const MainPage = lazy(() => import("./pages/MainPage"));
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainPage />,
+    element: (
+      <Suspense fallback={<SpinnerComponent />}>
+        <MainPage />
+      </Suspense>
+    ),
   },
 ]);
 
